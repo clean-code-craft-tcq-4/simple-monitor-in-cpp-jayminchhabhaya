@@ -3,7 +3,7 @@
 #include <vector>
 #include <functional>
 using namespace std;
-using namespace BatteryStatus
+namespace BatteryStatus
 {
 	std::vector<std::function<bool(float, float)>> functptr;
 	class Battery
