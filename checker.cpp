@@ -6,7 +6,7 @@ using namespace BatteryStatus;
 bool Battery::batteryIsOk(std::vector<float>args) {
 	int i = 0;
 	for (const auto& funptr : functptr) {
-        if(!funptr(args[i++])
+        if(!funptr(args[i++]))
 		{
 		 return false;
 		}
