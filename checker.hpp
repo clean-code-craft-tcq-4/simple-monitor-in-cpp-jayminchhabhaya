@@ -1,3 +1,4 @@
+#pragma once
 #include <assert.h>
 #include <iostream>
 #include <vector>
@@ -5,7 +6,6 @@
 using namespace std;
 namespace BatteryStatus
 {
-	std::vector<std::function<bool(float)>> functptr;
 	class Battery
 	{
 		public:
@@ -19,6 +19,7 @@ namespace BatteryStatus
 			static bool batteryTemperatureIsOk(float temperature);
 			static bool batterysocIsOk(float soc);
 			static bool batterychargeRateIsOk(float chargeRate);
+			std::vector<std::function<bool(float)>> functptr;
 			
     };
 }
