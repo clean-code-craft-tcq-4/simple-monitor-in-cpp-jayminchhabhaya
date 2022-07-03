@@ -3,20 +3,15 @@
 #include "checker.hpp"
 using namespace std;
 using namespace BatteryStatus;
-//bool Battery::batteryIsOk(float temperature, float soc, float chargeRate) {
-bool Battery::batteryIsOk(std::vector<float> args) {
+bool Battery::batteryIsOk(std::vector<float>args) {
 	int i = 0;
 	for (const auto& funptr : functptr) {
-        if(!funptr(args[i++]))
+        if(!funptr(args[i++])
 		{
 		 return false;
 		}
     }
 	return true;
-	
-  /*if(functptr[0](temperature) && functptr[1](soc) && functptr[2](chargeRate)) 
-	 return true;
-  return false; */
 }
 bool Battery::batteryTemperatureIsOk(float temperature)
 {
