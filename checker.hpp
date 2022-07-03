@@ -15,16 +15,11 @@ namespace BatteryStatus
 				functptr.emplace_back(Battery::batterychargeRateIsOk);
 			};
 			~Battery(){};
-		    bool batteryIsOk(std::vector<float>args);
+		    bool batteryIsOk(std::vector<float>BatteryFunctionParameters);
 			static bool batteryTemperatureIsOk(float temperature);
 			static bool batterysocIsOk(float soc);
 			static bool batterychargeRateIsOk(float chargeRate);
 			std::vector<std::function<bool(float)>> functptr;
 			
     };
-	struct BatteryFunctionParameters{
-		float temperature;
-		float soc;
-		float chargeRate;
-	};
 }
