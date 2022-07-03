@@ -5,7 +5,7 @@
 using namespace std;
 namespace BatteryStatus
 {
-	std::vector<std::function<bool(float, float)>> functptr;
+	std::vector<std::function<bool(float)>> functptr;
 	class Battery
 	{
 		public:
