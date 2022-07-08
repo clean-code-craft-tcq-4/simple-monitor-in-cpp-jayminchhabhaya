@@ -4,11 +4,10 @@
 #include <vector>
 #include <functional>
 using namespace std;
-#define MinTemperature 0
-#define MaxTemperature 45
-#define MaxSoc 20
-#define MaxSoc 80
-
+#define MINTEMPERATURE 0
+#define MAXTEMPERATURE 45
+#define MINSOC 20
+#define MAXSOC 80
 
 namespace BatteryStatus
 {
