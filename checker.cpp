@@ -24,10 +24,10 @@ bool Battery::batteryIsOk(std::vector<float>ParametersofBatteryStatus) {
 	return true;
 }
 bool Battery::batteryTemperatureIsOk(float temperature){
-	return ChecksStatus(MinTemperature,MaxTemperature,temperature,"Temperature");
+	return ChecksStatus(MINTEMPERATURE,MAXTEMPERATURE,temperature,"Temperature");
 }
 bool Battery::batterysocIsOk(float soc){
-	 return ChecksStatus(MinSoc,MaxSoc,soc,"State of Charge");
+	 return ChecksStatus(MINSOC,MAXSOC,soc,"State of Charge");
 }
 bool Battery::batterychargeRateIsOk(float chargeRate){
 	if(chargeRate > 0.8) {
