@@ -3,10 +3,10 @@
 #include "checker.hpp"
 using namespace std;
 using namespace BatteryStatus;
-bool Battery::batteryIsOk(std::vector<float>BatteryFunctionParameters) {
+bool Battery::batteryIsOk(std::vector<float>ParametersofBatteryStatus) {
 	int i = 0;
 	for (const auto& funptr : functptr) {
-        if(!funptr(BatteryFunctionParameters[i++]))
+        if(!funptr(ParametersofBatteryStatus[i++]))
 		{
 		 return false;
 		}
